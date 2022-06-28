@@ -1,0 +1,332 @@
+/* Inherited values are not conflicting selectors. It is declaring values for child elements within the body that do not have any properties already assigned to them. */
+/* Universal selection is *. you should always start every project with Universal selector getting rid of default margins. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page sections */
+body {
+  color: #444;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.container {
+  width: 1300px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+}
+/* Reset magins and paddings  */
+.main-header {
+  background-color: #dbdbdb;
+  /* background-color: red; */
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 40px;
+  margin-bottom: 30px;
+  /* position: relative; */
+  /* height: 80px; */
+  /* height: auto; */
+}
+nav {
+  font-size: 18px;
+  display: flex;
+  gap: 20px;
+  /* justify-content: space-between; */
+  /* text-align: center; */
+}
+
+article {
+  margin-bottom: 60px;
+}
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #dbdbdb;
+  border-top: 5px solid rgb(31, 172, 214);
+  border-bottom: 5px solid rgb(31, 172, 214);
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  padding: 50px 40px;
+  box-sizing: border-box;
+}
+
+/* add comma to multiple elements to apply adjectives to all of them */
+/* Smaller elements */
+h1,
+h2,
+h3 {
+  color: rgb(31, 172, 214);
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+h4 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  /* display: inline; */
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  /* display: inline; */
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/* article header p {
+  font-size: italic;
+} */
+
+/* # is for ID; . is for classes
+ */
+.main-author-text {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* body {
+  background-color: blue;
+} */
+/* Selecting multiple items in a list without making a class */
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+/* li:nth-child(even) { */
+/* color: red; */
+/* } */
+
+/* article p:first-child {
+  color: red;
+} this wont work because p is not the first child under article */
+
+/* All ways to make hyperlinks fun using pseudo classes */
+a:link {
+  color: rgb(31, 172, 214);
+  text-decoration: none;
+  /* outline: orange solid 5px; */
+}
+a:visited {
+  color: rgb(31, 172, 214);
+}
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline wavy orangered;
+}
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+.post-img {
+  /* 100% is of the parent width, so because it is underneath the header, it will automatically adjust to any adjustments to the browser. */
+  width: 100%;
+  height: auto;
+  margin-left: 15px;
+}
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  /* top: 50px;
+  left: 50px; */
+  bottom: 50px;
+  right: 50px;
+  /* outline: orange solid 5px; */
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: yellow;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+  /* outline: orange solid 5px; */
+}
+
+/* h3 + p::first-line { */
+/* color: red; */
+/* } */
+/* nav a:link {
+  background-color: orangered;
+  margin: 20px;
+  padding: 30px;
+
+  display: block;
+} */
+/* Resolving Conflicts */
+/* #copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+.text {
+  color: yellow;
+}
+footer p {
+  color: green;
+} */
+
+/* floats - organize page layout */
+
+/* .main-author {
+  float: left;
+  margin-bottom: 20px;
+}
+.main-author-text {
+  /* padding-left: 80px; */
+/* float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+} */
+/* h1 { */
+/* float: left;
+}
+nav {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+} */
+
+/* article {
+  /* background-color: aqua; */
+/* width: 825px; */
+/* float: left; */
+/* } */
+/* aside { */
+/* background-color: red; */
+/* width: 300px; */
+/* float: right; */
+/* }  */
+/* footer {
+  background-color: green;
+  clear: both;
+}  */
+
+/* Flexbox */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 15px;
+  /* outline: orangered solid 5px; */
+}
+.author-box {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 15px; */
+  margin: 15px 15px;
+}
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
+}
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+  margin-bottom: 60px;
+}
+article {
+  flex: 1;
+  margin-bottom: 0;
+}
+aside {
+  flex: 0 0 300px;
+}
